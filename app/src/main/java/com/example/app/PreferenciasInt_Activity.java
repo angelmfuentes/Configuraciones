@@ -31,7 +31,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class PreferenciasInt_Activity extends ActionBarActivity {
-    public static final String TAG = InternetActivity.class.getSimpleName();
     protected TextView txtV1;
     protected TextView txtV2;
     protected TextView txtV3;

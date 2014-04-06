@@ -4,4 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.app.MainActivity"
-    tools:ignore="MergeRootFrame" />
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesion"
+        android:id="@+id/button"
+        android:layout_gravity="right|top" />
+</FrameLayout>

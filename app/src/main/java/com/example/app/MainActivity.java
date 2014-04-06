@@ -1,5 +1,6 @@
 package com.example.app;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -11,8 +12,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.Button;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class MainActivity extends ActionBarActivity {
+    String NOMBRE = "Estado";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +34,27 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        Button cerrar=(Button)findViewById(R.id.button);
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    FileOutputStream fileOutputStream =
+                            openFileOutput(NOMBRE, Context.MODE_PRIVATE);
+
+                    //MODE_APPEND, MODE_WORLD_READABLE, and MODE_WORLD_WRITEABLE
+
+                    fileOutputStream.write(" ".getBytes());
+                    fileOutputStream.close();
+                }
+                catch (FileNotFoundException e) {}
+                catch (IOException e) {}
+
+                finish();
+                Intent myIntent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(myIntent);
+            }
+        });
     }
 
     @Override
