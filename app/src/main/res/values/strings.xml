@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Configuraciones</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_preferencias">PreferenciasActivity</string>
+    <string name="title_activity_lista">ListaActivity</string>
+    <string name="title_activity_menu_opcional">menu_opcional</string>
+    <string name="title_error">error</string>
+    <string name="title_error_mensaje">ErrorMensaje</string>
+    <string name="title_activity_preferencias_int_">PreferenciasInt_Activity</string>
+
+</resources>
